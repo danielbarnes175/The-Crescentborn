@@ -3,6 +3,7 @@
 # Player
 default mc_name = "MC"
 default mc_age = "25"
+default mc_location = Location.UNKNOWN
 
 # Time
 default total_day_number = 1

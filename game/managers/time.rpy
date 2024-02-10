@@ -1,3 +1,21 @@
+init python:
+    from enum import Enum
+
+    class Time(Enum):
+        MORNING = "Morning"
+        MIDDAY = "Midday"
+        EVENING = "Evening"
+        NIGHT = "Night"
+
+    class DayOfWeek(Enum):
+        MONDAY = "Monday"
+        TUESDAY = "Tuesday"
+        WEDNESDAY = "Wednesday"
+        THURSDAY = "Thursday"
+        FRIDAY = "Friday"
+        SATURDAY = "Saturday"
+        SUNDAY = "Sunday"
+
 label day_loop:
     call morning from _call_morning
     call day from _call_day
@@ -14,42 +32,51 @@ label change_day:
         $ week_number += 1
 
     if day_number == 1:
-        $ day_of_week = "Monday"
+        $ day_of_week = DayOfWeek.MONDAY
     elif day_number == 2:
-        $ day_of_week = "Tuesday"
+        $ day_of_week = DayOfWeek.TUESDAY
     elif day_number == 3:
-        $ day_of_week = "Wednesday"
+        $ day_of_week = DayOfWeek.WEDNESDAY
     elif day_number == 4:
-        $ day_of_week = "Thursday"
+        $ day_of_week = DayOfWeek.THURSDAY
     elif day_number == 5:
-        $ day_of_week = "Friday"
+        $ day_of_week = DayOfWeek.FRIDAY
     elif day_number == 6:
-        $ day_of_week = "Saturday"
+        $ day_of_week = DayOfWeek.SATURDAY
     elif day_number == 7:
-        $ day_of_week = "Sunday"
+        $ day_of_week = DayOfWeek.SUNDAY
 
     return
 
 label morning:
     scene bg room
     with fade
-    $ time_of_day = "Morning"
+    $ time_of_day = Time.MORNING
     "You got up and started to get ready for the day."
+
+    $ trigger_events(main_story_events)
+    $ trigger_events(character_events)
     
     return
 
 label day:
     scene bg classroom
     with fade
-    $ time_of_day = "Midday"
+    $ time_of_day = Time.MIDDAY
     "It is the middle of the day."
+
+    $ trigger_events(main_story_events)
+    $ trigger_events(character_events)
 
     return
 
 label evening:
     scene bg moon
     with fade
-    $ time_of_day = "Evening"
+    $ time_of_day = Time.EVENING
     "It is the end of the day."
+
+    $ trigger_events(main_story_events)
+    $ trigger_events(character_events)
     
     return

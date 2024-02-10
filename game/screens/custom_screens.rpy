@@ -73,6 +73,6 @@ transform map_button(x, y):
 
 screen DayDisplay():
     tag DayDisplay
-    text "[day_of_week]" ypos 0.05 xpos 0.05
+    text "[day_of_week.value]" ypos 0.05 xpos 0.05
     text "Week [week_number] Day [day_number]" ypos 0.1 xpos 0.05
-    text "[time_of_day]" ypos 0.15 xpos 0.05
+    text "[time_of_day.value]" ypos 0.15 xpos 0.05

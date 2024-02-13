@@ -9,6 +9,7 @@ default mc_location = Location.UNKNOWN
 default total_day_number = 1
 default day_number = 1
 default day_of_week = "Monday"
+default time_of_day = "morning"
 
 # Misc
 default current_scene = ""

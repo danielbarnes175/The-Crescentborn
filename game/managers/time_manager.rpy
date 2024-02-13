@@ -17,6 +17,16 @@ init python:
         SATURDAY = "Saturday"
         SUNDAY = "Sunday"
 
+    def advance_time():
+        if time_of_day == Time.MORNING:
+            renpy.jump("day")
+        elif time_of_day == Time.MIDDAY:
+            renpy.jump("evening")
+        elif time_of_day == Time.EVENING:
+            renpy.jump("morning")  # Assuming the loop starts again in the morning
+        else:
+            renpy.error("Invalid time of day")
+
 label day_loop:
     call morning from _call_morning
     call day from _call_day
@@ -50,20 +60,24 @@ label change_day:
     return
 
 label morning:
-    scene bg room
-    with fade
+    scene bg room with fade
     $ time_of_day = Time.MORNING
     $ mc_location = Location.DORM
     "You got up and started to get ready for the day."
 
     $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
     $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)
-    
+
+
+    show screen GameUI
+    ""
+    hide screen GameUI
+
+    "Time passed by..."
     return
 
 label day:
-    scene bg classroom
-    with fade
+    scene bg classroom with fade
     $ time_of_day = Time.MIDDAY
     $ mc_location = Location.CLASSROOM
     "It is the middle of the day."
@@ -71,16 +85,25 @@ label day:
     $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
     $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)
 
+    show screen GameUI
+    ""
+    hide screen GameUI
+
+    "Time passed by..."
     return
 
 label evening:
-    scene bg moon
-    with fade
+    scene bg moon with fade
     $ time_of_day = Time.EVENING
     $ mc_location = Location.DORM
     "It is the end of the day."
 
     $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
     $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)
+
+    show screen GameUI
+    ""
+    hide screen GameUI
     
+    "Time passed by..."
     return

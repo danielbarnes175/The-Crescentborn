@@ -19,3 +19,8 @@ init python:
     class Event_Type(Enum):
         MAIN_STORY_EVENT = 1
         CHARACTER_EVENT = 2
+
+    # For use on the map UI
+    def JumpAndHide(target):
+        renpy.jump(target)
+        renpy.hide_screen("MapUI")

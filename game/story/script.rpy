@@ -57,7 +57,6 @@ label start:
     call classroom_intro from _call_classroom_intro
 
     while True:
-        show screen GameUI
         # window hide
         show screen DayDisplay
         call change_day from _call_change_day

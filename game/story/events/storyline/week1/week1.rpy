@@ -1,5 +1,6 @@
 label classroom_intro:
     scene bg classroom with fade
+    $ mc_location = Location.CLASSROOM
     "You walk into the classroom. There's a list of seating arrangements, which you thought was a little strange, but you found your name and moved over to your table."
     "The rest of the class soon filtered in. There seemed to be people of all shapes and sizes."
     "Your table mates came in as well, but you did your best not to stare, so you pretended to daydream and stare off into space."

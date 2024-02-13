@@ -64,14 +64,13 @@ init 1 python:
 
     # Define main storyline events
     main_story_events = {
-        #MainStoryEvent(name="kuviis_intro", passage_name="kuviis_intro", repeatable=True, day=1, time=Time.MIDDAY, location=Location.LOVERS_FOLLY),
-        #MainStoryEvent(name="Event 2", day=2, time=Time.EVENING, location="home", passage_name="event_2_passage"),
+        "generic_school_day": MainStoryEvent(name="generic_school_day", passage_name="generic_school_day", repeatable=True, week=1, day=1, time=Time.MORNING, location=Location.CLASSROOM),
         # Add more main storyline events here
     }
 
     # Define character events
     character_events = {
-        "kuviis_intro": CharacterEvent(name="kuviis_intro", passage_name="kuviis_intro", repeatable=False, week=3, day=1, time=Time.MIDDAY, location=Location.LOVERS_FOLLY, relationship_threshold=0),
-        "kuviis_generic_hangout": CharacterEvent(name="kuviis_generic_hangout", passage_name="kuviis_generic_hangout", repeatable=True, week=3, day=1, time=Time.ANY, location=Location.LOVERS_FOLLY, relationship_threshold=0, prerequisites=["kuviis_intro"]),
+        "kuviis_intro": CharacterEvent(name="kuviis_intro", passage_name="kuviis_intro", repeatable=False, week=1, day=1, time=Time.MIDDAY, location=Location.LOVERS_FOLLY, relationship_threshold=0),
+        "kuviis_generic_hangout": CharacterEvent(name="kuviis_generic_hangout", passage_name="kuviis_generic_hangout", repeatable=True, week=1, day=1, time=Time.ANY, location=Location.LOVERS_FOLLY, relationship_threshold=0, prerequisites=["kuviis_intro"]),
         # Add more character events here
     }

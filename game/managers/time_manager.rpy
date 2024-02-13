@@ -63,15 +63,12 @@ label morning:
     scene bg room with fade
     $ time_of_day = Time.MORNING
     $ mc_location = Location.DORM
-    "You got up and started to get ready for the day."
+    "You got up and started to get ready for the day. After getting ready, you made your way to class."
+
+    $ mc_location = Location.CLASSROOM
 
     $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
     $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)
-
-
-    show screen GameUI
-    ""
-    hide screen GameUI
 
     "Time passed by..."
     return
@@ -80,7 +77,7 @@ label day:
     scene bg classroom with fade
     $ time_of_day = Time.MIDDAY
     $ mc_location = Location.CLASSROOM
-    "It is the middle of the day."
+    "It is the middle of the day. You have some free time."
 
     $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
     $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)
@@ -96,7 +93,7 @@ label evening:
     scene bg moon with fade
     $ time_of_day = Time.EVENING
     $ mc_location = Location.DORM
-    "It is the end of the day."
+    "It is the end of the day. You have some free time."
 
     $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
     $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)

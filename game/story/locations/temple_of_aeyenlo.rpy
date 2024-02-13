@@ -1,9 +1,9 @@
 label temple_of_aeyenlo_main:
     scene bg temple_of_aeyenlo with fade
-    $ mc.location = Location.TEMPLE_OF_AEYENLO
+    $ mc_location = Location.TEMPLE_OF_AEYENLO
     "Welcome to the Temple of Aeyenlo"
 
-    $ trigger_events(main_story_events)
-    $ trigger_events(character_events)
+    $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
+    $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)
     
     return

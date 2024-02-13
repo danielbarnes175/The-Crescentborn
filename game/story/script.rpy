@@ -15,7 +15,7 @@ label splashscreen:
 # The game starts here.
 label start:
     play music "audio/creepy_hallow.mp3"
-    $ mc.location = Location.DREAM
+    $ mc_location = Location.DREAM
 
     scene bg moon with fade
 
@@ -38,7 +38,7 @@ label start:
 
     scene bg room with fade
     play music "audio/pickled_pink.mp3"
-    $ mc.location = Location.DORM
+    $ mc_location = Location.DORM
 
     "Today was your first day at the Balvor Tower, a magical academy in the middle of Eleria, the country you've lived your entire life in."
     "You took a look at your schedule, and slightly frowned. It only had one class on it, 'magical studies'."
@@ -57,7 +57,7 @@ label start:
     call classroom_intro from _call_classroom_intro
 
     while True:
-        # show screen GameUI
+        show screen GameUI
         # window hide
         show screen DayDisplay
         call change_day from _call_change_day

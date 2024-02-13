@@ -10,4 +10,7 @@ default total_day_number = 1
 default day_number = 1
 default day_of_week = "Monday"
 
+# Misc
+default current_scene = ""
+
 # Flags

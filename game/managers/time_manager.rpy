@@ -2,6 +2,7 @@ init python:
     from enum import Enum
 
     class Time(Enum):
+        ANY = "Any"
         MORNING = "Morning"
         MIDDAY = "Midday"
         EVENING = "Evening"
@@ -52,10 +53,11 @@ label morning:
     scene bg room
     with fade
     $ time_of_day = Time.MORNING
+    $ mc_location = Location.DORM
     "You got up and started to get ready for the day."
 
-    $ trigger_events(main_story_events)
-    $ trigger_events(character_events)
+    $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
+    $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)
     
     return
 
@@ -63,10 +65,11 @@ label day:
     scene bg classroom
     with fade
     $ time_of_day = Time.MIDDAY
+    $ mc_location = Location.CLASSROOM
     "It is the middle of the day."
 
-    $ trigger_events(main_story_events)
-    $ trigger_events(character_events)
+    $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
+    $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)
 
     return
 
@@ -74,9 +77,10 @@ label evening:
     scene bg moon
     with fade
     $ time_of_day = Time.EVENING
+    $ mc_location = Location.DORM
     "It is the end of the day."
 
-    $ trigger_events(main_story_events)
-    $ trigger_events(character_events)
+    $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
+    $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)
     
     return

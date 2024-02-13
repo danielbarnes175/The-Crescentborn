@@ -3,6 +3,7 @@ init python:
     
     class Location(Enum):
         UNKNOWN = "Unknown"
+        CLASSROOM = "Classroom"
         DREAM = "Dream"
         DORM = "Dorm"
         BALVORS_TOWER = "Balvor's Tower"
@@ -14,3 +15,7 @@ init python:
         TEMPLE_OF_AEYENLO = "Temple of Aeyenlo"
         THE_CITADEL = "The Citadel"
         URSIOWATCH = "Ursiowatch"
+
+    class Event_Type(Enum):
+        MAIN_STORY_EVENT = 1
+        CHARACTER_EVENT = 2

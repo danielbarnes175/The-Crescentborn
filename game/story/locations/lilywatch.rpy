@@ -1,9 +1,9 @@
 label lilywatch_main:
     scene bg lilywatch with fade
-    $ mc.location = Location.LILYWATCH
+    $ mc_location = Location.LILYWATCH
     "Welcome to Lilywatch"
 
-    $ trigger_events(main_story_events)
-    $ trigger_events(character_events)
+    $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
+    $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)
     
     return

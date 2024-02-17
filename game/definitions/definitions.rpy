@@ -12,8 +12,10 @@ init python:
         LILYWATCH = "Lilywatch"
         LOVERS_FOLLY = "Lover's Folly"
         PRAELOR = "Praelor"
+        PRAELOR_BRASHY_BREW = "The Brashy Brew"
         TEMPLE_OF_AEYENLO = "Temple of Aeyenlo"
         THE_CITADEL = "The Citadel"
+        THE_CITADEL_LIBRARY = "The Library"
         URSIOWATCH = "Ursiowatch"
 
     class Event_Type(Enum):

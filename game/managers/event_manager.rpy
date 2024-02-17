@@ -70,7 +70,21 @@ init 1 python:
 
     # Define character events
     character_events = {
+        # Bluejay
+        "bluejay_intro": CharacterEvent(name="bluejay_intro", passage_name="bluejay_intro", repeatable=False, week=1, day=1, time=Time.MIDDAY, location=Location.PRAELOR, relationship_threshold=0),
+        "bluejay_generic_hangout": CharacterEvent(name="bluejay_generic_hangout", passage_name="bluejay_generic_hangout", repeatable=True, week=1, day=1, time=Time.ANY, location=Location.PRAELOR_BRASHY_BREW, relationship_threshold=0, prerequisites=["bluejay_intro"]),
+
+        # Gudrak
+        "gudrak_intro": CharacterEvent(name="gudrak_intro", passage_name="gudrak_intro", repeatable=False, week=1, day=1, time=Time.MIDDAY, location=Location.THE_CITADEL_LIBRARY, relationship_threshold=0),
+        "gudrak_generic_hangout": CharacterEvent(name="gudrak_generic_hangout", passage_name="gudrak_generic_hangout", repeatable=True, week=1, day=1, time=Time.ANY, location=Location.THE_CITADEL_LIBRARY, relationship_threshold=0, prerequisites=["gudrak_intro"]),
+
+        # Kuviis
         "kuviis_intro": CharacterEvent(name="kuviis_intro", passage_name="kuviis_intro", repeatable=False, week=1, day=1, time=Time.MIDDAY, location=Location.LOVERS_FOLLY, relationship_threshold=0),
         "kuviis_generic_hangout": CharacterEvent(name="kuviis_generic_hangout", passage_name="kuviis_generic_hangout", repeatable=True, week=1, day=1, time=Time.ANY, location=Location.LOVERS_FOLLY, relationship_threshold=0, prerequisites=["kuviis_intro"]),
+        
+        # Ralph
+        "ralph_intro": CharacterEvent(name="ralph_intro", passage_name="ralph_intro", repeatable=False, week=1, day=1, time=Time.MIDDAY, location=Location.FIGHTERS_GUILD, relationship_threshold=0),
+        "ralph_generic_hangout": CharacterEvent(name="ralph_generic_hangout", passage_name="ralph_generic_hangout", repeatable=True, week=1, day=1, time=Time.ANY, location=Location.FIGHTERS_GUILD, relationship_threshold=0, prerequisites=["ralph_intro"]),
+
         # Add more character events here
     }

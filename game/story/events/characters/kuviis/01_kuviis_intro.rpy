@@ -1,5 +1,4 @@
 label kuviis_intro:
-    $ kuviis_intro_scene_triggered = True
     # When player enters Lover’s Folly for the first time after meeting the class project teammates
     # show bg lovers_folly_outside panning top to bottom
 

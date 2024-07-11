@@ -65,6 +65,8 @@ init 1 python:
     # Define main storyline events
     main_story_events = {
         "generic_school_day": MainStoryEvent(name="generic_school_day", passage_name="generic_school_day", repeatable=True, week=1, day=1, time=Time.MORNING, location=Location.CLASSROOM),
+        "scene_00_prologue": MainStoryEvent(name="scene_00_prologue", passage_name="scene_00_prologue", repeatable=False, week=1, day=1, time=Time.ANY, location=Location.UNKNOWN),
+        "scene_01_first_day": MainStoryEvent(name="scene_01_first_day", passage_name="scene_01_first_day", repeatable=False, week=1, day=1, time=Time.MORNING, location=Location.DORM)
         # Add more main storyline events here
     }
 

@@ -26,3 +26,14 @@ init python:
     def JumpAndHide(target):
         renpy.jump(target)
         renpy.hide_screen("MapUI")
+
+    # Fade between dialogue texts
+    def fade_in_callback(who, *args, **kwargs):
+        dis = Dissolve(0.5)
+        renpy.transition(dis)
+        return args, kwargs
+
+    config.say_arguments_callback = fade_in_callback
+
+default dissolve = Fade(2.5, 1, 1)
+    

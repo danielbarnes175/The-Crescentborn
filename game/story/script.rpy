@@ -66,3 +66,12 @@ label start:
         call day_loop from _call_day_loop
 
     return
+
+label free_time_tutorial:
+    $ free_time_tutorial_finished = True
+    nvl clear
+    nvl_narrator "You have unlocked Free Time. This part of the game allows you to explore the nearby lands, and form relationships with those around you."
+    nvl_narrator "Tap the map icon to open up the map, then just select an area to go there. You can press the hourglass icon if you just want to pass the time."
+
+    nvl clear
+    return

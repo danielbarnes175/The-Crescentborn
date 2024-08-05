@@ -1,17 +1,17 @@
 screen GameUI:
-    imagebutton:
+    imagebutton: # Map
         xalign 1.0
         yalign 0.0
         xoffset -30
         yoffset 30
         auto "UI/map_button_%s.png"
         action Show("MapUI")
-    imagebutton:
+    imagebutton: # Pass time
         xalign 1.0
         yalign 0.0
-        xoffset -160
-        yoffset 30
-        auto "UI/map_button_%s.png"
+        xoffset -140
+        yoffset 20
+        auto "UI/hourglass_%s.png"
         action Function(advance_time)
 
 screen MapUI():

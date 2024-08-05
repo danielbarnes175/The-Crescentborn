@@ -77,14 +77,18 @@ label day:
     scene bg classroom with fade
     $ time_of_day = Time.MIDDAY
     $ mc_location = Location.CLASSROOM
-    "It is the middle of the day. You have some free time."
+    if not free_time_tutorial_finished:
+        call free_time_tutorial
 
     $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
     $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)
 
+    "It is the middle of the day. You have some free time."
+    window hide
     show screen GameUI
-    ""
+    pause
     hide screen GameUI
+    window show
 
     "Time passed by..."
     return
@@ -93,14 +97,16 @@ label evening:
     scene bg moon with fade
     $ time_of_day = Time.EVENING
     $ mc_location = Location.DORM
-    "It is the end of the day. You have some free time."
 
     $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
     $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)
 
+    "It is the end of the day. You have some free time."
+    window hide
     show screen GameUI
-    ""
+    pause
     hide screen GameUI
+    window show
     
     "Time passed by..."
     return

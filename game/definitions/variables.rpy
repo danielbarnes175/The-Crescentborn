@@ -15,3 +15,4 @@ default time_of_day = Time.MORNING
 default current_scene = ""
 
 # Flags
+default free_time_tutorial_finished = False

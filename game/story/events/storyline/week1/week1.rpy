@@ -1,5 +1,5 @@
 label scene_01_first_day:
-    play music "audio/creepy_hallow.mp3"
+    $ audio_crossFade(2, "audio/creepy_hallow.mp3")
     $ mc_location = Location.DREAM
 
     scene bg moon with fade
@@ -22,7 +22,7 @@ label scene_01_first_day:
     "When they said their name, you couldn't make out what they said. And before you had a chance to say anything more, the dream faded away."
 
     scene bg room with fade
-    play music "audio/pickled_pink.mp3"
+    $ audio_crossFade(2, "audio/pickled_pink.mp3")
     $ mc_location = Location.DORM
 
     "Your eyes opened to blinding sunlight. It didn’t take long for them to adjust, and the details of your room soon came into focus."

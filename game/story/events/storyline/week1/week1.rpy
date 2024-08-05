@@ -21,7 +21,7 @@ label scene_01_first_day:
     unknown_hreinar "We have joined once again, [mc_name]. I am ....... Have you yet realized thy purpose?"
     "When they said their name, you couldn't make out what they said. And before you had a chance to say anything more, the dream faded away."
 
-    scene bg room with fade
+    scene bg home_room with fade
     $ audio_crossFade(2, "audio/pickled_pink.mp3")
     $ mc_location = Location.DORM
 
@@ -41,6 +41,7 @@ label scene_01_first_day:
     "Today was your first day at the prestigious Balvor Tower, a magical academy at the heart of Eleria, your home country."
     "Well, perhaps not exactly the heart. Wizards liked their privacy after all, and it had been quite the hike from the royal capital to get here. But after many days of hard travel, you were finally at the end of your journey."
 
+    scene bg path_to_school with fade
     "Seeing the Tower creep over the trees for the first time had been quite the sight, but the experience of setting foot within the walls simply couldn’t compare."
     "You had seen magic before, of course, but with so much magic gathered in one place, even the air itself felt different. Sweeter, more vibrant. It was hard to describe."
 
@@ -65,6 +66,9 @@ label scene_01_first_day:
     "The very rude girl stormed off, leaving you bewildered and a little annoyed."
     "Shaking your head, you stand back up as the small crowd of curious onlookers go back about their business. Your first day is off to quite the start."
     "You pushed the rude girl out of your mind as you refocused on finding your way. Helpful service gnomes guided you through the unfamiliar campus, leading you straight to something you could only describe as an advisor’s office. A wizened old woman sat behind the booth."
+    
+    scene bg advisors_booth with fade
+
     unknown_generic "Name, dear?"
     mc "[mc_name]"
     unknown_generic "I see. This'll be yours, then."
@@ -93,100 +97,76 @@ label scene_01_first_day:
 label classroom_intro:
     scene bg classroom with fade
     $ mc_location = Location.CLASSROOM
-    "You walk into the classroom. There's a list of seating arrangements, which you thought was a little strange, but you found your name and moved over to your table."
-    "The rest of the class soon filtered in. There seemed to be people of all shapes and sizes."
-    "Your table mates came in as well, but you did your best not to stare, so you pretended to daydream and stare off into space."
-    "Eventually the professor walked in, and introduced himself."
 
-    show professor
-    professor "Good morning class. I'll be your professor for the year. If you haven't heard already, the Balvor Tower curriculum is different than most academies in Eleria."
-    professor "Rather than place you into classes specific to your chosen area of study, we have the first years work on a single magical project for the year."
-    professor "The details of this project will be discussed in time, but for now, take a look at your classmates sitting next to you. These people will be your group members for the year. So go on and introduce yourselves."
-    hide professor
+    "You were surprised to find the room almost empty when you arrived. A handful of people had beaten you there, but most of the seats were still left unfilled."
+    "You glanced at the large sheet of parchment nailed onto the wall, realizing it was a seating chart."
+    "On the way to finding your seat, you realized that what you’d thought were desks were actually tables; a small handful of students could comfortably sit around them and have plenty of space for themselves. And with a start, you realized that your table was already occupied."
 
-    "I looked around at my group, and my eyes got stuck on one member in particular."
-    show gudrak embarrassed
-    "I realized I was staring at a half-orc girl who had about a foot and a half on me. I looked around, and everybody else was staring at her too."
-    "She looked like she was about to pass out, so I decided to help her."
-    mc "Hey everyone. My name is [mc_name]. I'm [mc_age] and I'm here to study defensive magic."
-    "Seeing a few blank stares, I decided to give a little more detail."
-    mc "You know, like spells you would use to protect a house from rain, or to fight off bandits."
-    "I looked at the half-orc girl again. She seemed relieved all the attention was off her, so I was surprised when she spoke up next."
-    show gudrak
-    gudrak "O-okay, um, hi. My name is Gudrak, I'm 28-I mean 29 years old, and I, uh, work in the library."
-    "She started to shrink back in her chair."
-    show gudrak embarrassed
-    with dissolve
-    gudrak "I'm studying tome making with a minor in tower construction."
-    "Tower construction...?"
-    "Another girl spoke up."
-    show gudrak embarrassed:
-        linear 0.3 xalign 0.3
-    show kuviis with moveinright:
-        xalign 0.7 yalign 1.0
-    kuviis "Tower construction? Like how?"
-    hide gudrak embarrassed
-    show gudrak:
-        xalign 0.3 yalign 1.0
-    gudrak "Oh, like for wizard towers. I-i thought that, since I'm a half-orc, and I wanna be a mage, that there's probably not that many mages who can do physical labor. This way I can do both!"
-    "She seemed a lot more confident than she was a second ago."
-    "The conversation turned to the next introduction but not before I saw Gudrak mouth the words \"thank you\" out of the corner of my eye."
-    kuviis "Alright then. I guess I'm up next."
+    show bluejay_hidden
+    "You doubted you would have noticed the cloaked man with his hood drawn up, had you not sat at the same table. He nodded at you as you took your seat, but the gesture didn’t at all put you at ease. You couldn’t help but notice his eyes were hidden from view beneath that cowl."
+    hide bluejay_hidden
 
-    
-    hide gudrak
-    with dissolve
-    "We all turned to look at the young half-elf."
-    hide kuviis
-    show kuviis at center
-    with move
-    kuviis "My name is Kuviis Bailey. I'm here because my home life was getting quite boring, and I figured that this Academy would add a little excitement."
-    kuviis "It'll at least be interesting, judging by the curriculum. Oh, I should also mention that I'm majoring in poetry."
-    "This time it was you asking a question."
-    mc "You've come to a magical academy to study poetry?"
-    show kuviis annoyed
-    kuviis "Yes, is there something wrong with that?"
-    "You could tell by the tone in her voice that she this probably wasn't a battle you should fight."
-    mc "N-no, of course not... Why don't we move on? Who's next?"
-    hide kuviis
-    with dissolve
+    "Thankfully, you were saved from any awkward introductions by the arrival of, seemingly, the entire rest of the class all at once."
+    "Streams of people poured in, each of them stranger than the last. It seemed as many elves as humans were in your class, along with a pair of orcs, a few humanoid beings you couldn’t quite place, and even a gnome."
+    "Suddenly, the lone chair that stood a few feet taller than the rest made more sense."
 
-    unknown "I can go next..."
-    show bluejay
-    with dissolve
-    "We all turned to look at the source of the grizzly voice. It was an older man with a bunch of scars on his face."
-    bluejay "My name is Eignar, but you can call me Bluejay. I'll be honest, at 58 years old, I'm not really set up for adventuring much these days, so I applied here, hoping that I'd be able to find somewhere calm to retire."
-    bluejay "I'm currently classified as 'undecided' for my major, and I'd like to keep it that way."
+    "As you watched the tide of students pour in, you had a strange thought. Had… had the room looked this big from the outside?"
+    "There were already dozens of people inside, and dozens more on the way, whereas you had expected a classroom of maybe a dozen people at most."
 
-    "He was a little strange, and you suspected that he was hiding a few things."
-    "The silence in the group opened up for the last member of the group to talk."
-
-    hide bluejay
+    "One of the new arrivals headed your way, and you were right to think he was joining your group. A young man approached you and gave you a small smile."
     show ralph
-    
-    ralph "The name's Ralph Qurnaget, and I'm here studying nature magic as a representative of my clan."
-    "The elf spoke somewhat bluntly, although with the typical refinedness that elves usually speak with. It was kind of strange listening to him, to be honest."
-    ralph "I'm also the oldest out of all of us, at 312 years old."
+    ralph "Pleasure to meet you,"
+    "The man stuck out his hand."
+    ralph "My name is Ralph Qurnaget. What's yours?"
 
-    "312?! The elf looked like he was in his 20s! Genetics were truly unfair sometimes."
-    "Ralph smiled as he noticed the shock on all of our faces."
+    mc "[mc_name]."
 
-    ralph "Well alright then, that's all the introductions for our group, and just in time, it looks like the professor is bringing everyone back together."
-
+    "Ralph smiled and turned to the stranger."
+    ralph "And you?"
     hide ralph
-    with dissolve
-    "Ralph gestured up to the front of the classroom, to which we all moved our eyes. The professor was indeed standing up and preparing to talk to the class."
+    show bluejay_hidden
+    "The hooded man nodded again, and said nothing."
+    hide bluejay_hidden
+    show ralph
 
-    show professor
-    professor "Alright, hopefully you've all gotten a chance to meet each other. Now, we're going to talk about the project for the year."
+    ralph "Interesting name..."
+    "You were somewhat relieved when he took a seat between you and the mute stranger."
+    "He was either an exceedingly healthy human or an elf, you couldn’t tell, but he seemed much more outgoing than the other stranger at your table."
+    "A little blunt and to the point, but it was better than silence. He at least seemed like an honest person."
 
-    call project_intro from _call_project_intro
+    "You decided to ask him a few questions while people were still filing in."
+    $ _ralph_question_balvor = False
+    $ _ralph_question_himself = False
+    menu ralph_questions:
+        "What would you like to ask Ralph?"
+        "What do you know about Balvor?":
+            $ _ralph_question_balvor = True
+            ralph "You're new to the area, aren't you."
+            mc "...I am..."
+            ralph "Nothing wrong with being a traveler, but it explains quite a bit."
+            mc "And you? Are you from around here?"
+            ralph "Not exactly, but I’ve been in the area before. It’s an old town, I’ll tell you that. This place used to be a monastery from what I understand."
+            ralph "Eventually it turned into a school, and grew to be quite famous. Originally only a handful of mages gathered here to study and research, and they became quite famous, making Balvor a famous name."
+            ralph "The more famous Balvor became, the more mages flocked to its halls. The more mages made a name for themselves here, the more famous the Tower became. Make sense?"
+            menu:
+                "I guess so...":
+                    pass
+                "No, not really...":
+                    pass
+            ralph "Well, as the school grew, it needed to get bigger to fit more students, staff, experiments, and so on."
+            ralph "The Tower is still the centerpiece, but a dozen different buildings sprang up around it, even other towers. It’s a small castle now more than anything else, really."
+            ralph "And try as they might, the mages couldn’t stop new towns springing up right next door. Praelor’s the only one that’s worth mentioning; the others are simple hamlets, really. Not much to mention about them."
+            jump ralph_questions
 
-    "After the professor finished his explanation of the project, class ended. My groupmates all bid each other goodbye until tomorrow, and I returned to my room."
+        "Tell me about yourself.":
+            $ _ralph_question_himself = True
+            ralph "Truth be told, I’d rather not. I prefer to keep to myself for the most part, but I’m looking forward to learning to harness magic."
+            ralph "If you ever want a partner to practice with, I would be interested in testing myself against you."
+            mc "...O...kay..."
+            jump ralph_questions
 
-    return
+        "Don't ask anymore questions." if _ralph_question_balvor and _ralph_question_himself:
+            pass
 
-label project_intro:
-    "Explain the project..."
-
-    return
+    "Out of the corner of your eye, you noticed that one of the orcs was seemingly going in circles. You thought you’d seen her before, and you soon realized why: she was lost."
+    "She’d already passed by your table twice, and was clearly growing more and more anxious the longer it took for her to find her seat."

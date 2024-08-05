@@ -14,6 +14,14 @@ default time_of_day = Time.MORNING
 # Misc
 default current_scene = ""
 
+# Audio
+default audio_main_free_time = "audio/pickled_pink.mp3"
+default audio_main_hreinar = "audio/creepy_hallow.mp3"
+default audio_main_bluejay = "audio/night_of_mystery.mp3"
+default audio_main_ralph = "audio/vopna.mp3"
+default audio_main_kuviis = "audio/digeridoo.mp3"
+default audio_main_gudrak = "audio/digeridoo.mp3"
+
 # Flags
 default free_time_tutorial_finished = False
 default balvor_tower_unlocked = False

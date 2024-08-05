@@ -1,5 +1,5 @@
 label scene_01_first_day:
-    $ audio_crossFade(2, "audio/creepy_hallow.mp3")
+    $ audio_crossFade(2, audio_main_hreinar)
     $ mc_location = Location.DREAM
 
     scene bg moon with fade
@@ -22,7 +22,7 @@ label scene_01_first_day:
     "When they said their name, you couldn't make out what they said. And before you had a chance to say anything more, the dream faded away."
 
     scene bg home_room with fade
-    $ audio_crossFade(2, "audio/pickled_pink.mp3")
+    $ audio_crossFade(2, audio_main_free_time)
     $ mc_location = Location.DORM
 
     "Your eyes opened to blinding sunlight. It didn’t take long for them to adjust, and the details of your room soon came into focus."
@@ -46,6 +46,7 @@ label scene_01_first_day:
     "You had seen magic before, of course, but with so much magic gathered in one place, even the air itself felt different. Sweeter, more vibrant. It was hard to describe."
 
     "You walked amidst a crowd of humans, elves, and everything in between. Off in the distance, a pegasus and a wyvern looked like they were playing tag; if you squinted your eyes, you could just make out their riders."
+    $ audio_crossFade(1, audio_main_kuviis)
     "*CRASH*"
     "Joy and wonder turned to pain and sorrow, as you found yourself suddenly sprawled out on the ground… and having dragged someone down with you."
 
@@ -66,7 +67,7 @@ label scene_01_first_day:
     "The very rude girl stormed off, leaving you bewildered and a little annoyed."
     "Shaking your head, you stand back up as the small crowd of curious onlookers go back about their business. Your first day is off to quite the start."
     "You pushed the rude girl out of your mind as you refocused on finding your way. Helpful service gnomes guided you through the unfamiliar campus, leading you straight to something you could only describe as an advisor’s office. A wizened old woman sat behind the booth."
-    
+    $ audio_crossFade(2, audio_main_free_time)
     scene bg advisors_booth with fade
 
     unknown_generic "Name, dear?"
@@ -91,6 +92,8 @@ label scene_01_first_day:
     "You appreciated the view your simple room offered, but the ringing of a dozen different bells pulled your attention back from the scenery."
 
     "It was time to head to class."
+
+    call classroom_intro
 
     return
 
@@ -460,5 +463,24 @@ label classroom_intro:
     show headmistress_sullon
     headmistress_sullon "Now, there will be plenty of time for discussion and brainstorming throughout the next few weeks. But in the meantime, it’s time to get started on the theory..."
     "You pulled out a piece of parchment, ready to take notes, but found yourself distracted the whole way through. This relic business was already shaping up to be more difficult than you’d expected, and it was only the first day."
+
+    return
+
+label second_dream:
+    $ audio_crossFade(2, audio_main_hreinar)
+    $ mc_location = Location.DREAM
+
+    scene bg moon with fade
+    "It was the same black forest. Clouds shifted, allowing moonlight to pour over the clearing for but a moment, before the skies obscured it again."
+    show hreinar silhouette
+    "The mottled gray and white made it difficult to focus on the figure before you, but you knew you wouldn’t be able to anyway. It was the same shadow you always saw, and just like the others, this time they were just as hazy, like their outline wasn’t solid."
+
+    unknown_hreinar "Crescentborn."
+    "Always the same name. Always the same mystery."
+    unknown_hreinar "Your heart is still weak, your soul fragile... grow stronger, my child. You have many allies beside you, but time... time is not one of them..."
+    hide hreinar silhouette
+    "You blinked; the shadow was gone. It was like it had dissolved before your very eyes."
+    "The clouds shifted again, and moonlight streamed down again. You looked up to meet it, the light almost blinding from amidst the darkness. You raised your arms to cover your eyes. The last thing you saw before waking, in another cold sweat, was a full moon."
+    $ audio_crossFade(2, audio_main_free_time)
 
     return

@@ -60,9 +60,13 @@ label change_day:
     return
 
 label morning:
-    scene bg room with fade
     $ time_of_day = Time.MORNING
     $ mc_location = Location.DORM
+
+    $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
+    $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)
+
+    scene bg room with fade
     "You got up and started to get ready for the day. After getting ready, you made your way to class."
 
     $ mc_location = Location.CLASSROOM
@@ -74,14 +78,13 @@ label morning:
     return
 
 label day:
-    scene bg classroom with fade
     $ time_of_day = Time.MIDDAY
     $ mc_location = Location.CLASSROOM
     
-
     $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
     $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)
 
+    scene bg classroom with fade
     "It is the middle of the day. You have some free time."
     if not free_time_tutorial_finished:
         call free_time_tutorial
@@ -95,14 +98,14 @@ label day:
     "Time passed by..."
     return
 
-label evening:
-    scene bg moon with fade
+label evening: 
     $ time_of_day = Time.EVENING
     $ mc_location = Location.DORM
 
     $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
     $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)
 
+    scene bg moon with fade
     "It is the end of the day. You have some free time."
     window hide
     show screen GameUI

@@ -323,7 +323,7 @@ label scene_00_prologue:
     # flash
     scene blue
     with Pause(0.25)
-    scene black
+    scene bg_prologue_magic_circle_destroyed
 
     "{size=-4}With a cry, Jeivor fell flat on his back, the old man somehow finding the strength to cast a final spell before his end. A long cut, quite shallow, now spread from shoulder to shoulder as blood dyed his clothes crimson. Had Daskalos cast that spell mere moments earlier, he would have lost his head.{/size}"
 

@@ -1,4 +1,5 @@
 label kuviis_intro:
+    $ audio_crossFade(2, audio_main_kuviis)
     # When player enters Lover’s Folly for the first time after meeting the class project teammates
     # show bg lovers_folly_outside panning top to bottom
 
@@ -81,5 +82,5 @@ label kuviis_intro:
     "Before you knew it, Kuviis walked down the stairs, leaving you by yourself at the top of the tower."
     "At least things seemed smoothed over with her, but you were hopeful that her fiery temper wasn't going to be a regular appearance."
     "You spent a little longer at Lover's Folly staring at the landscape before deciding to head back."
-
+    $ audio_crossFade(2, audio_main_free_time)
     return

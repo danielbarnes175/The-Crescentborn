@@ -1,6 +1,4 @@
 init 1 python:
-    # from game.managers.time_manager import Time, DayOfWeek
-
     class MainStoryEvent:
         def __init__(self, name, passage_name, repeatable, week, day, time, location, prerequisites=None):
             self.name = name
@@ -66,7 +64,9 @@ init 1 python:
     main_story_events = {
         "generic_school_day": MainStoryEvent(name="generic_school_day", passage_name="generic_school_day", repeatable=True, week=1, day=1, time=Time.MORNING, location=Location.CLASSROOM),
         "scene_00_prologue": MainStoryEvent(name="scene_00_prologue", passage_name="scene_00_prologue", repeatable=False, week=1, day=1, time=Time.ANY, location=Location.UNKNOWN),
-        "scene_01_first_day": MainStoryEvent(name="scene_01_first_day", passage_name="scene_01_first_day", repeatable=False, week=1, day=1, time=Time.MORNING, location=Location.DORM)
+        "scene_01_first_day": MainStoryEvent(name="scene_01_first_day", passage_name="scene_01_first_day", repeatable=False, week=1, day=1, time=Time.MORNING, location=Location.DREAM),
+        "second_dream": MainStoryEvent(name="second_dream", passage_name="second_dream", repeatable=False, week=1, day=4, time=Time.MORNING, location=Location.DORM),
+        "balvor_tower_exploration": MainStoryEvent(name="balvor_tower_exploration", passage_name="balvor_tower_exploration", repeatable=False, week=2, day=1, time=Time.ANY, location=Location.BALVOR_TOWER)
         # Add more main storyline events here
     }
 

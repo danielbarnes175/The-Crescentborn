@@ -6,7 +6,7 @@ init python:
         CLASSROOM = "Classroom"
         DREAM = "Dream"
         DORM = "Dorm"
-        BALVORS_TOWER = "Balvor's Tower"
+        BALVOR_TOWER = "Balvor Tower"
         DALORS_FURY = "Dalor's Fury"
         FIGHTERS_GUILD = "Fighter's Guild"
         LILYWATCH = "Lilywatch"

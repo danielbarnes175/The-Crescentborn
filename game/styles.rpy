@@ -1,2 +1,2 @@
 style default:
-    outlines [ (absolute(1), "#ff0000", absolute(0), absolute(0)) ]
+    outlines [ (absolute(1), "#000000", absolute(0), absolute(0)) ]

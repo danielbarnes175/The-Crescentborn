@@ -1,8 +1,11 @@
 label scene_00_prologue:
+    scene bg prologue_fireworks with fade
+
     "Fireworks blast into being as a thousand lights in a dark sky. Lights from a thousand lanterns illuminate the village and house the myriad of peoples that from dusk till dawn celebrate the yearly lunar festival." with Dissolve(2.0)
     "The old fairy tales tell that it is a mere holdover from a more storied past, where myth and legend were as true as history. But now, it is a cause for celebration as one year passes, and a new one begins." with Dissolve(2.0)
     "{size=-2}The school at the center of Praelor, an old and wizened fortress manned by the wisest and most powerful of those with magic blood in their veins plays host every year, and the same mages that in study unravel the secrets of the worlds both living and dead, tonight cast wondrous incantations and illusions to the laughter of the townsfolk. Praelor celebrates, merry and hopeful.{/size}"
 
+    scene bg prologue_balvor_tower with fade
     "{size=-4}But three relics of the ancient world ignore the celebrations, climbing instead to the top of the tallest tower of the near-emptied Balvor Tower. Hooded in black cloaks, they seemed to meld into the shadows, and not a soul heard or saw a single trace of their presence.{/size}"
 
     "In the final staircase, one hooded figure spoke to the others."
@@ -90,12 +93,14 @@ label scene_00_prologue:
 
     sotec "Jeivor, put yours over here."
 
-    "{size=-7}Within the bundles were a dagger's hilt - it's blade having long since rusted away - and a brooch, something women in an age long forgotten would offer as a dowry. Along with the ring, Daskalos arranged them at the three remaining cardinal directions. Jeivor had already placed his own item in the north; a goblet of pure gold.{/size}"
+    scene bg prologue_relics with fade
+    "{size=-7}Within the bundles were a dagger's hilt - it's blade having long since rusted away - and a brooch, something women in an age long forgotten would offer as a dowry. Along with the ring, Daskalos arranged them at the three remaining cardinal directions. Jeivor had already placed his own item in the north; a circlet of pure gold.{/size}"
 
     sotec "Sit, Jeivor. Opposite me, just as we've practiced."
 
     "While they sat cross-legged facing one another, Daskalos went about drawing the necessary runes. Before long, an elaborate magic circle was beginning to take shape."
 
+    scene bg prologue_magic_circle with fade
     jeivor "How does it... feel?"
 
     sotec "It isn't painful."
@@ -244,6 +249,7 @@ label scene_00_prologue:
 
     sotec "Disperse!"
 
+    scene bg_prologue_magic_circle_destroyed
     "The sudden cry brought forth yet another blast of winds blew the rocks clean off the tower."
 
     "The sitting man collapsed in a heap, looking as if he were on the verge of unconsciousness."
@@ -351,6 +357,20 @@ label scene_00_prologue:
 
     "He eyed the deeply blue sapphire nestled in its center, appreciating the beauty up close as he had always wanted to."
 
-    "With one final touch each, the remaining three Relics turned to dust as well, their magic absorbed into the air. They weren’t gone, merely intangible. What could be done could be undone; he just needed to learn how."
+    "With one final touch each, the remaining three Relics turned to dust as well, their magic absorbed into the air. They weren’t gone, merely intangible. What could be done could be undone; he just needed to learn how..."
 
+    call the_crescentborn_prologue_intro
     return
+
+label the_crescentborn_prologue_intro:
+    $quick_menu = False
+    scene main_menu with fade
+    with Pause(4)
+
+    scene black with Dissolve(0.5)
+    show text "20 years later..." with dissolve
+    with Pause(1)
+
+    hide text with dissolve
+    with Pause(1)
+    $quick_menu = True

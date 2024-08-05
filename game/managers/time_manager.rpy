@@ -77,13 +77,15 @@ label day:
     scene bg classroom with fade
     $ time_of_day = Time.MIDDAY
     $ mc_location = Location.CLASSROOM
-    if not free_time_tutorial_finished:
-        call free_time_tutorial
+    
 
     $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
     $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)
 
     "It is the middle of the day. You have some free time."
+    if not free_time_tutorial_finished:
+        call free_time_tutorial
+
     window hide
     show screen GameUI
     pause
@@ -109,4 +111,19 @@ label evening:
     window show
     
     "Time passed by..."
+    return
+
+label free_time_tutorial:
+    $ free_time_tutorial_finished = True
+    nvl clear
+    nvl_narrator "You have unlocked Free Time. This part of the game allows you to explore the nearby lands, and form relationships with those around you."
+    nvl_narrator "Tap the map icon to open up the map, then just select an area to go there. You can press the hourglass icon if you just want to pass the time."
+    nvl_narrator "Right now, you only have a couple places unlocked, but as you progress, more locations will open."
+    nvl_narrator "TODO make this look better..."
+
+    $ balvor_tower_unlocked = True
+    $ the_citadel_unlocked = True
+    $ lovers_folly_unlocked = True
+
+    nvl clear
     return

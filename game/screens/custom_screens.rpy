@@ -24,51 +24,60 @@ screen MapUI():
         yoffset 30
         auto "UI/return_arrow_%s.png"
         action Rollback()
-    imagebutton:
-        at map_button(820, 24)
-        idle "map/the_citadel_hover.png"
-        hover "map/the_citadel_hover.png"
-        action [ Hide("MapUI"), Call("the_citadel_main")]
-    imagebutton:
-        at map_button(1420, 277)
-        idle "map/balvor_tower_hover.png"
-        hover "map/balvor_tower_hover.png"
-        action [ Hide("MapUI"), Call("balvor_tower_main")]
-    imagebutton:
-        at map_button(580, 0)
-        idle "map/dalors_fury_hover.png"
-        hover "map/dalors_fury_hover.png"
-        action [ Hide("MapUI"), Call("dalors_fury_main")]
-    imagebutton:
-        at map_button(987, 552)
-        idle "map/fighters_guild_hover.png"
-        hover "map/fighters_guild_hover.png"
-        action [ Hide("MapUI"), Call("fighters_guild_main")]
-    imagebutton:
-        at map_button(0, 124)
-        idle "map/lilywatch_hover.png"
-        hover "map/lilywatch_hover.png"
-        action [ Hide("MapUI"), Call("lilywatch_main")]
-    imagebutton:
-        at map_button(467, 85)
-        idle "map/lovers_folly_hover.png"
-        hover "map/lovers_folly_hover.png"
-        action [ Hide("MapUI"), Call("lovers_folly_main")]
-    imagebutton:
-        at map_button(200, 480)
-        idle "map/praelor_hover.png"
-        hover "map/praelor_hover.png"
-        action [ Hide("MapUI"), Call("praelor_main")]
-    imagebutton:
-        at map_button(605, 672)
-        idle "map/temple_of_aeyenlo_hover.png"
-        hover "map/temple_of_aeyenlo_hover.png"
-        action [ Hide("MapUI"), Call("temple_of_aeyenlo_main")]
-    imagebutton:
-        at map_button(1327, 823)
-        idle "map/ursiowatch_hover.png"
-        hover "map/ursiowatch_hover.png"
-        action [ Hide("MapUI"), Call("ursiowatch_main")]
+    if the_citadel_unlocked:
+        imagebutton:
+            at map_button(820, 24)
+            idle "map/the_citadel_hover.png"
+            hover "map/the_citadel_hover.png"
+            action [ Hide("MapUI"), Call("the_citadel_main")]
+    if balvor_tower_unlocked:
+        imagebutton:
+            at map_button(1420, 277)
+            idle "map/balvor_tower_hover.png"
+            hover "map/balvor_tower_hover.png"
+            action [ Hide("MapUI"), Call("balvor_tower_main")]
+    if dalors_fury_unlocked:
+        imagebutton:
+            at map_button(580, 0)
+            idle "map/dalors_fury_hover.png"
+            hover "map/dalors_fury_hover.png"
+            action [ Hide("MapUI"), Call("dalors_fury_main")]
+    if fighters_guild_unlocked:
+        imagebutton:
+            at map_button(987, 552)
+            idle "map/fighters_guild_hover.png"
+            hover "map/fighters_guild_hover.png"
+            action [ Hide("MapUI"), Call("fighters_guild_main")]
+    if lilywatch_unlocked:
+        imagebutton:
+            at map_button(0, 124)
+            idle "map/lilywatch_hover.png"
+            hover "map/lilywatch_hover.png"
+            action [ Hide("MapUI"), Call("lilywatch_main")]
+    if lovers_folly_unlocked:
+        imagebutton:
+            at map_button(467, 85)
+            idle "map/lovers_folly_hover.png"
+            hover "map/lovers_folly_hover.png"
+            action [ Hide("MapUI"), Call("lovers_folly_main")]
+    if praelor_unlocked:
+        imagebutton:
+            at map_button(200, 480)
+            idle "map/praelor_hover.png"
+            hover "map/praelor_hover.png"
+            action [ Hide("MapUI"), Call("praelor_main")]
+    if temple_of_aeyenlo_unlocked:
+        imagebutton:
+            at map_button(605, 672)
+            idle "map/temple_of_aeyenlo_hover.png"
+            hover "map/temple_of_aeyenlo_hover.png"
+            action [ Hide("MapUI"), Call("temple_of_aeyenlo_main")]
+    if ursiowatch_unlocked:
+        imagebutton:
+            at map_button(1327, 823)
+            idle "map/ursiowatch_hover.png"
+            hover "map/ursiowatch_hover.png"
+            action [ Hide("MapUI"), Call("ursiowatch_main")]
 
 transform map_button(x, y):
     pos(x, y)

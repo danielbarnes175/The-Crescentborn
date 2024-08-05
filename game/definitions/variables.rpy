@@ -16,3 +16,12 @@ default current_scene = ""
 
 # Flags
 default free_time_tutorial_finished = False
+default balvor_tower_unlocked = False
+default dalors_fury_unlocked = False
+default fighters_guild_unlocked = False
+default lilywatch_unlocked = False
+default lovers_folly_unlocked = False
+default praelor_unlocked = False
+default temple_of_aeyenlo_unlocked = False
+default the_citadel_unlocked = False
+default ursiowatch_unlocked = False

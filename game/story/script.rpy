@@ -3,12 +3,9 @@ label splashscreen:
     scene black
     with Pause(1)
 
-    show bug
-    show text "dabes games presents" with dissolve
+    show dabes_games_logo with dissolve
     with Pause(2)
-
-    hide text with dissolve
-    with Pause(1)
+    hide dabes_games_logo with dissolve
 
     return
 

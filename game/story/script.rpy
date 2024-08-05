@@ -63,3 +63,25 @@ label start:
         call day_loop from _call_day_loop
 
     return
+
+label credits:
+    scene black
+    show text "Credits" with dissolve
+    with Pause(0.2)
+
+    show text "The Crescentborn - dabes games" with dissolve
+    with Pause(0.5)
+
+    show text "Daniel Barnes, Michael Aiello, Dylan Szolomayer" with dissolve
+    with Pause(0.5)
+
+    show text """Music: Night of Mystery by Alexander Nakarada (www.creatorchords.com)
+Licensed under Creative Commons BY Attribution 4.0 License
+https://creativecommons.org/licenses/by/4.0/""" with dissolve
+    show text """Music:  Vopna by Alexander Nakarada (www.serpentsoundstudios.com)
+Licensed under Creative Commons BY Attribution 4.0 License
+https://creativecommons.org/licenses/by/4.0/""" with dissolve
+    show text """Music: Halloween Theme 1 by Alexander Nakarada 
+Licensed under Creative Commons BY Attribution 4.0 License
+https://creativecommons.org/licenses/by/4.0/""" with dissolve
+with Pause(0.5)

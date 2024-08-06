@@ -249,7 +249,6 @@ label scene_00_prologue:
 
     sotec "Disperse!"
 
-    scene bg_prologue_magic_circle_destroyed
     "The sudden cry brought forth yet another blast of winds blew the rocks clean off the tower."
 
     "The sitting man collapsed in a heap, looking as if he were on the verge of unconsciousness."
@@ -321,9 +320,7 @@ label scene_00_prologue:
     "He reached out with one hand, grabbing Jeivor at random. He cast one last spell before succumbing to the darkness, hoping that he could do one last thing for the Goddess before he joined Sotec in the next life."
 
     # flash
-    scene blue
-    with Pause(0.25)
-    scene bg_prologue_magic_circle_destroyed
+    scene bg prologue_magic_circle_destroyed with flash
 
     "{size=-4}With a cry, Jeivor fell flat on his back, the old man somehow finding the strength to cast a final spell before his end. A long cut, quite shallow, now spread from shoulder to shoulder as blood dyed his clothes crimson. Had Daskalos cast that spell mere moments earlier, he would have lost his head.{/size}"
 
@@ -359,7 +356,7 @@ label scene_00_prologue:
 
     "With one final touch each, the remaining three Relics turned to dust as well, their magic absorbed into the air. They weren’t gone, merely intangible. What could be done could be undone; he just needed to learn how..."
 
-    call the_crescentborn_prologue_intro
+    call the_crescentborn_prologue_intro from _call_the_crescentborn_prologue_intro
     return
 
 label the_crescentborn_prologue_intro:

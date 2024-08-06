@@ -36,4 +36,5 @@ init python:
     config.say_arguments_callback = fade_in_callback
 
 default dissolve = Fade(2.5, 1, 1)
+define flash = Fade(.25, 0.0, .75, color="#fff")
     

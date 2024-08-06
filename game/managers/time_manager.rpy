@@ -87,7 +87,7 @@ label day:
     scene bg classroom with fade
     "It is the middle of the day. You have some free time."
     if not free_time_tutorial_finished:
-        call free_time_tutorial
+        call free_time_tutorial from _call_free_time_tutorial
 
     window hide
     show screen GameUI
@@ -125,7 +125,6 @@ label free_time_tutorial:
     nvl_narrator "TODO make this look better..."
 
     $ balvor_tower_unlocked = True
-    $ the_citadel_unlocked = True
     $ lovers_folly_unlocked = True
 
     nvl clear

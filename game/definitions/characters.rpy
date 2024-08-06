@@ -17,11 +17,14 @@ define unknown_generic = Character("???", color="#ffffff")
 define unknown_kuviis = Character("???", color="#DEC8C4", callback = name_callback, cb_name = "kuviis")
 
 define hreinar = Character("Hreinar", color="ff0000")
-define headmistress_sullon = Character("Headmistress Sullon, Archmage of Balvor Tower", callback = name_callback, cb_name = "kuviis" )
+define headmistress_sullon = Character("Headmistress Sullon, Archmage of Balvor Tower", callback = name_callback, cb_name = "headmistress_sullon" )
 
 define daskalos = Character("Daskalos", color="#7c4e4e")
 define sotec = Character("Sotec", color="#7c6666")
 define jeivor = Character("Jeivor", color="#614444")
+
+image headmistress_sullon = At('images/characters/headmistress_sullon.png', sprite_highlight('headmistress_sullon'))
+image hreinar silhouette = At('images/characters/hreinar_silhouette.png', sprite_highlight('unknown_hreinar'))
 
 image kuviis = At('images/characters/kuviis.png', sprite_highlight('kuviis'))
 image kuviis annoyed = At('images/characters/kuviis_annoyed.png', sprite_highlight('kuviis'))

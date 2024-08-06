@@ -16,12 +16,13 @@ label start:
     $ time_of_day = Time.MORNING
 
     # We need some setup for the start of the game before we get to the normal time loop
+    # Prologue
     $ mc_location = Location.UNKNOWN
-    $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT) # Prologue
-
-    "hmm"
+    $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT) 
+    
+    # Intro
     $ mc_location = Location.DREAM
-    $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT) # Intro
+    $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
 
     # Now we are in the normal time loop
     while True:

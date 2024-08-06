@@ -13,7 +13,7 @@ label scene_01_first_day:
     unknown_hreinar "The Crescentborn."
     unknown_hreinar "Given that this meeting is increasingly occuring, maybe we should introduce ourselves?"
 
-    "As blurry as their form was, so too was their voice. It reverberated deep within you, but if you had to say whether the voice was male, female, loud, shrill, or at all defined… you could make no such statement."
+    "As blurry as their form was, so too was their voice. It reverberated deep within you, but if you had to say whether the voice was male, female, loud, shrill, or at all defined... you could make no such statement."
     "It was if the shadow spoke without a voice at all, their words manifesting within your very mind."
     "The figure seemed to be waiting for your response."
     $ mc_name = renpy.input("What is your name?", default="MC", length=32)
@@ -21,7 +21,8 @@ label scene_01_first_day:
     unknown_hreinar "We have joined once again, [mc_name]. I am ....... Have you yet realized thy purpose?"
     "When they said their name, you couldn't make out what they said. And before you had a chance to say anything more, the dream faded away."
 
-    scene bg home_room with fade
+    # scene bg home_room with fade
+    scene bg room with fade
     $ audio_crossFade(2, audio_main_free_time)
     $ mc_location = Location.DORM
 
@@ -48,7 +49,7 @@ label scene_01_first_day:
     "You walked amidst a crowd of humans, elves, and everything in between. Off in the distance, a pegasus and a wyvern looked like they were playing tag; if you squinted your eyes, you could just make out their riders."
     $ audio_crossFade(1, audio_main_kuviis)
     "*CRASH*"
-    "Joy and wonder turned to pain and sorrow, as you found yourself suddenly sprawled out on the ground… and having dragged someone down with you."
+    "Joy and wonder turned to pain and sorrow, as you found yourself suddenly sprawled out on the ground... and having dragged someone down with you."
 
     show kuviis annoyed
     unknown_kuviis "OW!"
@@ -93,7 +94,7 @@ label scene_01_first_day:
 
     "It was time to head to class."
 
-    call classroom_intro
+    call classroom_intro from _call_classroom_intro
 
     return
 
@@ -113,7 +114,7 @@ label classroom_intro:
     "Streams of people poured in, each of them stranger than the last. It seemed as many elves as humans were in your class, along with a pair of orcs, a few humanoid beings you couldn’t quite place, and even a gnome."
     "Suddenly, the lone chair that stood a few feet taller than the rest made more sense."
 
-    "As you watched the tide of students pour in, you had a strange thought. Had… had the room looked this big from the outside?"
+    "As you watched the tide of students pour in, you had a strange thought. Had... had the room looked this big from the outside?"
     "There were already dozens of people inside, and dozens more on the way, whereas you had expected a classroom of maybe a dozen people at most."
 
     "One of the new arrivals headed your way, and you were right to think he was joining your group. A young man approached you and gave you a small smile."
@@ -293,7 +294,7 @@ label classroom_intro:
     "You heard quite a few people whispering and murmuring to one another, but the Headmistress only smiled until they fell silent. She then continued her introduction."
     headmistress_sullon "Over the course of the year, you’ll learn a great deal about magic; more than you’d ever expected I’m sure. But as much as I’m sure there are some experts here already, I know we also have some novices who have never so much as cast a spell before in their life."
     headmistress_sullon "So, what is magic? It’s the result of much study, care, and precision -- but at its simplest, it’s the harnessing of the life energy we all have within us. Some are graced with more than others, but we all have it."
-    headmistress_sullon "It’s part of what makes life possible. And to use magic is to recognize that there is magic within you. You must feel it, and then will it into the shape and form you want."
+    headmistress_sullon "It’s part of what makes life possible. And to use magic is to recognize that there is magic within you. You must feel it, and then will it into the shape and forwsm you want."
     headmistress_sullon "One can cast a spell with mere words, or even thought, but there is a much more straightforward way to do it: to use a medium. A conduit. A relic, if you will. Observe."
 
     "She undid her necklace and held it up for the class to see."
@@ -320,7 +321,7 @@ label classroom_intro:
 
     "She clapped her hands a few times and waved everyone to start talking amongst themselves. A few people, you noticed, watched her as she turned and started waving at the remains of the suit of armor, which started to reform before your very eyes."
     hide headmistress_sullon
-    show kuviis
+    show kuviis with moveinbottom
 
     kuviis "Well, {i}I{/i} already have a relic in mind."
     mc "What? It’s only been like two minutes since we even learned about them."
@@ -362,7 +363,7 @@ label classroom_intro:
     bluejay "Call me that, if you’d like. There’s nobody alive who would recognize me by that name. At least, if there was, I wouldn’t be here telling you about it."
     kuviis "And now you’re studying magic?"
     bluejay "It’s something different. Something... more certain."
-    kuviis "Hmmm… I see. Well, best of luck figuring out your relic."
+    kuviis "Hmmm... I see. Well, best of luck figuring out your relic."
     mc "Speaking of which..."
     hide kuviis
     hide bluejay
@@ -410,8 +411,7 @@ label classroom_intro:
                     jump ask_project_questions_eignar
                 "What was being a mercenary like?":
                     show bluejay
-                    bluejay "I thought it would be an adventure. For a time, it was, but being a mercenary is like being a soldier, just without the job security. When we’re not at war, you get hired as a bodyguard, or an assassin."
-                    bluejay "A mercenary’s life isn’t often a long one… quite a few of my friends found that out the hard way. Maybe in a few years, I’ll write a book about it all. But right now… it’s still too fresh in my mind. I’d rather focus on other things than reliving the past."
+                    bluejay "I thought it would be an adventure. For a time, it was, but being a mercenary is like being a soldier, just without the job security. Onwards and upwards, however. Even the acorn eventually changes."
                     hide bluejay
                     jump ask_project_questions_eignar
                 "Ask someone else.":
@@ -449,7 +449,7 @@ label classroom_intro:
                     jump ask_project_questions_gudrak
                 "Do you have any ideas for your relic?":
                     show gudrak
-                    gudrak "Not… not really. A few ideas, maybe… Is it weird to make your relic a book? But… what book would I pick? Where would I keep it? It’d be weird to carry a book around all day, wouldn’t it? I don’t know…"
+                    gudrak "Not... not really. A few ideas, maybe... Is it weird to make your relic a book? But... what book would I pick? Where would I keep it? It’d be weird to carry a book around all day, wouldn’t it? I don’t know..."
                     "You didn’t think you’d get very many ideas from Gudrak this early on."
                     hide gudrak
                     jump ask_project_questions_gudrak

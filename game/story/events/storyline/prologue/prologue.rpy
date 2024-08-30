@@ -361,8 +361,12 @@ label scene_00_prologue:
 
 label the_crescentborn_prologue_intro:
     $quick_menu = False
-    scene main_menu with fade
-    with Pause(4)
+
+    scene black with Dissolve(0.5)
+    with Pause(1)
+    
+    scene main_menu with CropMove(3, mode="irisout")
+    with Pause(3)
 
     scene black with Dissolve(0.5)
     show text "20 years later..." with dissolve

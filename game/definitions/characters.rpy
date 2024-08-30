@@ -32,6 +32,7 @@ image kuviis blush = At('images/characters/kuviis_blush.png', sprite_highlight('
 
 image gudrak = At('images/characters/gudrak.png', sprite_highlight('gudrak'))
 image gudrak embarrassed = At('images/characters/gudrak_embarrassed.png', sprite_highlight('gudrak'))
+image gudrak blush = At('images/characters/gudrak_blush.png', sprite_highlight('gudrak'))
 
 image bluejay = At('images/characters/bluejay.png', sprite_highlight('bluejay'))
 image bluejay hidden = At('images/characters/bluejay_hidden.png', sprite_highlight('bluejay'))

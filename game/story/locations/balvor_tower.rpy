@@ -9,6 +9,7 @@ label balvor_tower_main:
     return
 
 label balvor_tower_exploration:
+    $ balvor_tower_exploration.triggered = True
     $ mc_location = Location.BALVOR_TOWER
     scene bg balvor_tower_outside with fade
     "You decided to explore more of the Tower itself. All of your classes had taken place inside this tower, and yet, you hadn't actually fully explored the building. Class had been interesting, and you’d met many intriguing people, but the mysteries behind the Tower were just as compelling as anything within it."

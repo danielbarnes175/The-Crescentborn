@@ -1,4 +1,6 @@
 label scene_01_first_day:
+    $ scene_01_first_day.triggered = True
+    $ (main_story_events.get("scene_01_first_day")).scene_triggered = True
     $ audio_crossFade(2, audio_main_hreinar)
     $ mc_location = Location.DREAM
 
@@ -467,6 +469,7 @@ label classroom_intro:
     return
 
 label second_dream:
+    $ second_dream.triggered = True
     $ audio_crossFade(2, audio_main_hreinar)
     $ mc_location = Location.DREAM
 

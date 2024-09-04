@@ -1,6 +1,6 @@
 # Narrator
 define narrator = Character(None, callback = name_callback, cb_name = None)
-define nvl_narrator = nvl_narrator
+#define nvl_narrator = nvl_narrator
 
 # Characters used in the story
 define mc = Character("[mc_name]", color="#ff0000", callback = name_callback, cb_name = None)

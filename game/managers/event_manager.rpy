@@ -27,16 +27,14 @@ init 1 python:
     def trigger_events(events, event_type):
         # Loop through all events
         for key, event in events.items():
-            print(event.name, event.scene_triggered)
-            if event.scene_triggered and not event.repeatable:
+            #print(event.name, event.scene_triggered)
+            if is_event_triggered(event.name) and not event.repeatable:
                 continue  # Skip this event if already triggered
 
             if (week_number > event.week or (week_number == event.week and day_number >= event.day)):
                 if ((time_of_day == event.time or event.time == Time.ANY) and mc_location == event.location):
                     prerequisites_met = check_prerequisites(event)
                     if prerequisites_met:
-                        # Trigger the event's scene
-                        events[key].scene_triggered = True
                         renpy.call(event.passage_name)
 
 
@@ -50,15 +48,7 @@ init 1 python:
         return prerequisites_met
 
     def is_event_triggered(event_name):
-        main_story_event = main_story_events.get(event_name)
-        if main_story_event and main_story_event.scene_triggered:
-            return True
-
-        character_event = character_events.get(event_name)
-        if character_event and character_event.scene_triggered:
-            return True
-
-        return False
+        return getattr(renpy.store, event_name).triggered
 
     # Define main storyline events
     main_story_events = {

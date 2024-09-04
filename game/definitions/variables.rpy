@@ -8,6 +8,7 @@ default mc_location = Location.UNKNOWN
 # Time
 default total_day_number = 1
 default day_number = 1
+default week_number = 1
 default day_of_week = DayOfWeek.MONDAY
 default time_of_day = Time.MORNING
 
@@ -33,3 +34,20 @@ default praelor_unlocked = False
 default temple_of_aeyenlo_unlocked = False
 default the_citadel_unlocked = False
 default ursiowatch_unlocked = False
+
+# main_story_event flags
+default generic_school_day.triggered = False
+default scene_00_prologue.triggered = False
+default scene_01_first_day.triggered = False
+default second_dream.triggered = False
+default balvor_tower_exploration.triggered = False
+
+# character_events flags
+default bluejay_intro.triggered = False
+default bluejay_generic_hangout.triggered = False
+default gudrak_intro.triggered = False
+default gudrak_generic_hangout.triggered = False
+default kuviis_intro.triggered = False
+default kuviis_generic_hangout.triggered = False
+default ralph_intro.triggered = False
+default ralph_generic_hangout.triggered = False

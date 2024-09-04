@@ -1,4 +1,5 @@
 label scene_00_prologue:
+    $ scene_00_prologue_triggered = True
     scene bg prologue_fireworks with fade
 
     "Fireworks blast into being as a thousand lights in a dark sky. Lights from a thousand lanterns illuminate the village and house the myriad of peoples that from dusk till dawn celebrate the yearly lunar festival." with Dissolve(2.0)

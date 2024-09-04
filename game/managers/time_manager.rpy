@@ -67,12 +67,20 @@ label morning:
     $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)
 
     scene bg room with fade
-    "You got up and started to get ready for the day. After getting ready, you made your way to class."
+    if day_number == 6 or day_number == 7:
+        "It's the weekend! You have some free time."
 
-    $ mc_location = Location.CLASSROOM
+        window hide
+        show screen GameUI
+        pause
+        hide screen GameUI
+        window show
+    else:
+        "You got up and started to get ready for the day. After getting ready, you made your way to class."
 
-    $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
-    $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)
+        $ mc_location = Location.CLASSROOM
+        $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
+        $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)
 
     "Time passed by..."
     return
@@ -84,7 +92,7 @@ label day:
     $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
     $ trigger_events(character_events, Event_Type.CHARACTER_EVENT)
 
-    scene bg classroom with fade
+    scene bg inside_the_walls with fade
     "It is the middle of the day. You have some free time."
     if not free_time_tutorial_finished:
         call free_time_tutorial from _call_free_time_tutorial

@@ -15,14 +15,11 @@ label start:
     # Prologue
     $ mc_location = Location.UNKNOWN
     $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT) 
-
-    "Before the dream"
     
     # Intro
     $ mc_location = Location.DREAM
     $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
 
-    "Before the loop"
     # Now we are in the normal time loop
     while True:
         # window hide

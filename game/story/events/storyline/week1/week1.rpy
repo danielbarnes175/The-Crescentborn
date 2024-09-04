@@ -41,10 +41,11 @@ label scene_01_first_day:
     "Rubbing the last of the sleep out of your eyes, you decided you had better things to do than worry about some silly dream."
 
     "You grabbed the clothes you’d laid out the night before, dressing and heading down the stairs after grabbing your pack."
+    scene bg path_to_school with fade
     "Today was your first day at the prestigious Balvor Tower, a magical academy at the heart of Eleria, your home country."
     "Well, perhaps not exactly the heart. Wizards liked their privacy after all, and it had been quite the hike from the royal capital to get here. But after many days of hard travel, you were finally at the end of your journey."
 
-    scene bg path_to_school with fade
+    scene bg inside_the_walls with fade
     "Seeing the Tower creep over the trees for the first time had been quite the sight, but the experience of setting foot within the walls simply couldn’t compare."
     "You had seen magic before, of course, but with so much magic gathered in one place, even the air itself felt different. Sweeter, more vibrant. It was hard to describe."
 
@@ -65,10 +66,10 @@ label scene_01_first_day:
             show kuviis blush
             unknown_kuviis "Whatever, just pay attention next time!"
         "You watch where you're going!":
-            unknown_kuviis "Oh, it's my fault? Yeah, ok. I'll get you a seeing-eye familiar, how's that sound. Ugh!"
+            unknown_kuviis "Oh, it's my fault? Yeah, ok. I'll get you a seeing-eye familiar, how's that sound? Ugh!"
     
     "The very rude girl stormed off, leaving you bewildered and a little annoyed."
-    "Shaking your head, you stand back up as the small crowd of curious onlookers go back about their business. Your first day is off to quite the start."
+    "Shaking your head, you stand back up as the small crowd of curious onlookers go back about their business. Your first day was off to quite the start."
     "You pushed the rude girl out of your mind as you refocused on finding your way. Helpful service gnomes guided you through the unfamiliar campus, leading you straight to something you could only describe as an advisor’s office. A wizened old woman sat behind the booth."
     $ audio_crossFade(2, audio_main_free_time)
     scene bg advisors_booth with fade
@@ -189,8 +190,8 @@ label classroom_intro:
     ralph "You do. Which means whoever she is, Balvor’s mages think she is worthy of this education. I certainly won’t be underestimating her, and neither should you."
     hide ralph
 
-    "You began to notice that other students had realized the orc’s predicament as well. You never liked to see someone be the center of unwanted attention, so you stood up from your desk and walked towards her."
     show gudrak embarrassed
+    "You began to notice that other students had realized the orc’s predicament as well. You never liked to see someone be the center of unwanted attention, so you stood up from your desk and walked towards her."
     mc "What’s your name?"
     "Her eyes darted every which way, but never landed on your own."
     gudrak "G-gudrak."
@@ -481,7 +482,7 @@ label second_dream:
     unknown_hreinar "Crescentborn."
     "Always the same name. Always the same mystery."
     unknown_hreinar "Your heart is still weak, your soul fragile... grow stronger, my child. You have many allies beside you, but time... time is not one of them..."
-    hide hreinar silhouette
+    hide hreinar silhouette with Dissolve(1)
     "You blinked; the shadow was gone. It was like it had dissolved before your very eyes."
     "The clouds shifted again, and moonlight streamed down again. You looked up to meet it, the light almost blinding from amidst the darkness. You raised your arms to cover your eyes. The last thing you saw before waking, in another cold sweat, was a full moon."
     $ audio_crossFade(2, audio_main_free_time)

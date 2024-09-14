@@ -14,8 +14,13 @@ screen GameUI:
         auto "UI/hourglass_%s.png"
         action Function(advance_time)
 
+screen darknessOverlay:
+    zorder 200
+    add "#00000063"
+
 screen MapUI():
     tag MapUI
+    modal True
     add "backgrounds/bg map.jpg"
     imagebutton:
         xalign 1.0
@@ -24,6 +29,8 @@ screen MapUI():
         yoffset 30
         auto "UI/return_arrow_%s.png"
         action Rollback()
+    if time_of_day == Time.EVENING:
+        use darknessOverlay
     if the_citadel_unlocked:
         imagebutton:
             at map_button(820, 24)

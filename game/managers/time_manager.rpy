@@ -94,8 +94,6 @@ label day:
 
     scene bg inside_the_walls with fade
     "It is the middle of the day. You have some free time."
-    if not free_time_tutorial_finished:
-        call free_time_tutorial from _call_free_time_tutorial
 
     window hide
     show screen GameUI
@@ -130,6 +128,7 @@ label free_time_tutorial:
     nvl_narrator "You have unlocked Free Time. This part of the game allows you to explore the nearby lands, and form relationships with those around you."
     nvl_narrator "Tap the map icon to open up the map, then just select an area to go there. You can press the hourglass icon if you just want to pass the time."
     nvl_narrator "Right now, you only have a couple places unlocked, but as you progress, more locations will open."
+    nvl_narrator "New parts of the story will be unlocked simply by progressing through days, however, you can unlock even more content by building your relationship with other characters."
 
     $ balvor_tower_unlocked = True
     $ lovers_folly_unlocked = True

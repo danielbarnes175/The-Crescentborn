@@ -467,6 +467,7 @@ label classroom_intro:
     headmistress_sullon "Now, there will be plenty of time for discussion and brainstorming throughout the next few weeks. But in the meantime, it’s time to get started on the theory..."
     "You pulled out a piece of parchment, ready to take notes, but found yourself distracted the whole way through. This relic business was already shaping up to be more difficult than you’d expected, and it was only the first day."
 
+    hide headmistress_sullon
     return
 
 label second_dream:

@@ -20,6 +20,17 @@ label start:
     $ mc_location = Location.DREAM
     $ trigger_events(main_story_events, Event_Type.MAIN_STORY_EVENT)
 
+    "Soon enough, class ends, and you have some free time to explore."
+    if not free_time_tutorial_finished:
+        call free_time_tutorial from _call_free_time_tutorial
+    window hide
+    show screen GameUI
+    pause
+    hide screen GameUI
+    window show
+    call day
+    call evening
+
     # Now we are in the normal time loop
     while True:
         # window hide

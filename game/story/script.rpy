@@ -28,8 +28,8 @@ label start:
     pause
     hide screen GameUI
     window show
-    call day
-    call evening
+    call day from _call_day_1
+    call evening from _call_evening_1
 
     # Now we are in the normal time loop
     while True:

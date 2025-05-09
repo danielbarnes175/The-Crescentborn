@@ -89,7 +89,7 @@ screen MapUI():
 transform map_button(x, y):
     pos(x, y)
     on idle:
-        alpha 0.0
+        alpha 0.5
     on hover:
         alpha 1.0
 

@@ -126,7 +126,7 @@ label free_time_tutorial:
     $ free_time_tutorial_finished = True
     nvl clear
     nvl_narrator "You have unlocked Free Time. This part of the game allows you to explore the nearby lands, and form relationships with those around you."
-    nvl_narrator "Tap the map icon to open up the map, then just select an area to go there. You can press the hourglass icon if you just want to pass the time."
+    nvl_narrator "You'll be able to tap the map icon to open up the map, then just select an area to go there. You can also press the hourglass icon if you just want to pass the time."
     nvl_narrator "Right now, you only have a couple places unlocked, but as you progress, more locations will open."
     nvl_narrator "New parts of the story will be unlocked simply by progressing through days, however, you can unlock even more content by building your relationship with other characters."
 
